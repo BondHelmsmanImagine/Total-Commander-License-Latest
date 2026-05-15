@@ -22,9 +22,10 @@ int isPalindrome(char* str) {
 }
 
 int main() {
-    char str[100];
+#define STR_BUF_SIZE 100
+    char str[STR_BUF_SIZE];
     printf("Enter a string: ");
-    fgets(str, sizeof(str), stdin);
+    fgets(str, STR_BUF_SIZE, stdin);
     str[strcspn(str, "\n")] = 0;
     if (isPalindrome(str)) {
         printf("%s is a palindrome.\n", str);
